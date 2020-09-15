@@ -13,6 +13,60 @@ Things you may want to cover:
 
 * Database creation
 
+## users テーブル
+
+| Column          | Type   | Options     |
+| --------------- | ------ | ----------- |
+| nicname         | string | null: false |
+| email           | string | null: false |
+| password        | string | null: false |
+| last_name       | string | null: false |
+| first_name      | string | null: false |
+| last_name_read  | string | null: false |
+| first_name_read | string | null: false |
+| birth           | string | null: false |
+
+### Association
+
+- has_many :items
+- has_one :buyer
+
+## items テーブル
+
+| Column         | Type       | Options                        |
+| -------------- | ---------- | ------------------------------ |
+| name           | string     | null: false                    |
+| image          | string     | null: false                    |
+| category       | string     | null: false                    |
+| price          | string     | null: false                    |
+| text           | string     | null: false                    |
+| status         | string     | null: false                    |
+| seller         | string     | null: false                    |
+| burden         | string     | null: false                    |
+| Shipmentsource | string     | null: false                    |
+| deliverydate   | string     | null: false                    |
+| user           | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :user
+- has_one :buyer
+
+## buyers テーブル
+
+| Column           | Type       | Options                        |
+| ---------------- | ---------- | ------------------------------ |
+| Shipping_address | string     |                                |
+| card             | references | null: false, foreign_key: true |
+| user             | references | null: false, foreign_key: true |
+| item             | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :room
+- belongs_to :user
+
+
 * Database initialization
 
 * How to run the test suite
