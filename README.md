@@ -38,7 +38,7 @@ Things you may want to cover:
 | name           | string      | null: false                    |
 | category       | integer     | null: false                    |
 | price          | integer     | null: false                    |
-| text           | string      | null: false                    |
+| text           | text        | null: false                    |
 | status         | integer     | null: false                    |
 | burden         | integer     | null: false                    |
 | Shipmentsource | integer     | null: false                    |
