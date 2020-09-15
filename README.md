@@ -36,14 +36,13 @@ Things you may want to cover:
 | Column         | Type        | Options                        |
 | -------------- | ----------- | ------------------------------ |
 | name           | string      | null: false                    |
-| category       | string      | null: false                    |
+| category       | integer     | null: false                    |
 | price          | integer     | null: false                    |
 | text           | string      | null: false                    |
-| status         | string      | null: false                    |
-| seller         | string      | null: false                    |
-| burden         | string      | null: false                    |
-| Shipmentsource | string      | null: false                    |
-| deliverydate   | string      | null: false                    |
+| status         | integer     | null: false                    |
+| burden         | integer     | null: false                    |
+| Shipmentsource | integer     | null: false                    |
+| deliverydate   | integer     | null: false                    |
 | user           | references  | null: false, foreign_key: true |
 
 ### Association
@@ -51,12 +50,10 @@ Things you may want to cover:
 - belongs_to :user
 - has_one :buyer
 
-## buyers テーブル
+## purchases テーブル
 
 | Column           | Type       | Options                        |
 | ---------------- | ---------- | ------------------------------ |
-| Shipping_address | string     |                                |
-| card             | references | null: false, foreign_key: true |
 | user             | references | null: false, foreign_key: true |
 | item             | references | null: false, foreign_key: true |
 
@@ -65,6 +62,16 @@ Things you may want to cover:
 - belongs_to :room
 - belongs_to :user
 
+## buyers テーブル
+
+| Column           | Type       | Options                        |
+| ---------------- | ---------- | ------------------------------ |
+| address          | references | null: false, foreign_key: true |
+| item             | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs:：purchase
 
 * Database initialization
 
