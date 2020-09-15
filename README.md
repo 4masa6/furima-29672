@@ -24,7 +24,7 @@ Things you may want to cover:
 | first_name      | string | null: false |
 | last_name_read  | string | null: false |
 | first_name_read | string | null: false |
-| birth           | string | null: false |
+| birthday        | date   | null: false |
 
 ### Association
 
