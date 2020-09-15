@@ -36,13 +36,13 @@ Things you may want to cover:
 | Column         | Type        | Options                        |
 | -------------- | ----------- | ------------------------------ |
 | name           | string      | null: false                    |
-| category       | integer     | null: false                    |
+| category       | integer_id  | null: false                    |
 | price          | integer     | null: false                    |
 | text           | text        | null: false                    |
-| status         | integer     | null: false                    |
-| burden         | integer     | null: false                    |
-| Shipmentsource | integer     | null: false                    |
-| deliverydate   | integer     | null: false                    |
+| status         | integer_id  | null: false                    |
+| burden         | integer_id  | null: false                    |
+| Shipmentsource | integer_id  | null: false                    |
+| deliverydate   | integer_id  | null: false                    |
 | user           | references  | null: false, foreign_key: true |
 
 ### Association
