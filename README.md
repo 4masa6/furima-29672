@@ -33,17 +33,17 @@ Things you may want to cover:
 
 ## items テーブル
 
-| Column         | Type        | Options                        |
-| -------------- | ----------- | ------------------------------ |
-| name           | string      | null: false                    |
-| category       | category_id | null: false                    |
-| price          | integer     | null: false                    |
-| content        | text        | null: false                    |
-| status         | category_id | null: false                    |
-| burden         | category_id | null: false                    |
-| Shipmentsource | category_id | null: false                    |
-| deliverydate   | category_id | null: false                    |
-| user           | category_id | null: false, foreign_key: true |
+| Column            | Type        | Options                        |
+| ----------------- | ----------- | ------------------------------ |
+| name              | string      | null: false                    |
+| category_id       | integer     | null: false                    |
+| price             | integer     | null: false                    |
+| content           | text        | null: false                    |
+| status_id         | integer     | null: false                    |
+| burden_id         | integer     | null: false                    |
+| Shipmentsource_id | integer     | null: false                    |
+| deliverydate_id   | integer     | null: false                    |
+| user              | references  | null: false, foreign_key: true |
 
 ### Association
 
@@ -68,7 +68,7 @@ Things you may want to cover:
 | Column           | Type        | Options                        |
 | ---------------- | ----------- | ------------------------------ |
 | post_num         | integer     | null: false                    |
-| Prefectures      | category_id | null: false                    |
+| prefecture_id    | integer     | null: false                    |
 | city             | text        | null: false                    |
 | line             | text        | null: false                    |
 | building         | text        |                                |
