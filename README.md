@@ -29,7 +29,7 @@ Things you may want to cover:
 ### Association
 
 - has_many :items
-- has_many :buyers
+- has_many :orders
 
 ## items テーブル
 
@@ -38,7 +38,7 @@ Things you may want to cover:
 | name           | string      | null: false                    |
 | category       | integer_id  | null: false                    |
 | price          | integer     | null: false                    |
-| text           | text        | null: false                    |
+| content        | text        | null: false                    |
 | status         | integer_id  | null: false                    |
 | burden         | integer_id  | null: false                    |
 | Shipmentsource | integer_id  | null: false                    |
@@ -48,9 +48,9 @@ Things you may want to cover:
 ### Association
 
 - belongs_to :user
-- has_one :buyer
+- has_one :order
 
-## purchases テーブル
+## orders テーブル
 
 | Column           | Type       | Options                        |
 | ---------------- | ---------- | ------------------------------ |
@@ -59,18 +59,29 @@ Things you may want to cover:
 
 ### Association
 
-- belongs_to :room
 - belongs_to :user
+- belongs_to :item
+- has_one :buyer
 
 ## buyers テーブル
 
 | Column           | Type       | Options                        |
 | ---------------- | ---------- | ------------------------------ |
-| purchase         | references | null: false, foreign_key: true |
+| post_num         | integer    | null: false                    |
+| Prefectures      | integer_id | null: false                    |
+| city             | text       | null: false                    |
+| line             | text       | null: false                    |
+| building         | text       |                                |
+| tel_num          | integer    | null: false                    |
+| card_num         | integer    | null: false                    |
+| dead_line_month  | integer    | null: false                    |
+| dead_line_year   | integer    | null: false                    |
+| oder             | references | null: false, foreign_key: true |
+
 
 ### Association
 
-- belongs:：purchase
+- belongs_to :order
 
 * Database initialization
 
