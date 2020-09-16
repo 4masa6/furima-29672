@@ -36,14 +36,14 @@ Things you may want to cover:
 | Column         | Type        | Options                        |
 | -------------- | ----------- | ------------------------------ |
 | name           | string      | null: false                    |
-| category       | integer_id  | null: false                    |
+| category       | category_id | null: false                    |
 | price          | integer     | null: false                    |
 | content        | text        | null: false                    |
-| status         | integer_id  | null: false                    |
-| burden         | integer_id  | null: false                    |
-| Shipmentsource | integer_id  | null: false                    |
-| deliverydate   | integer_id  | null: false                    |
-| user           | references  | null: false, foreign_key: true |
+| status         | category_id | null: false                    |
+| burden         | category_id | null: false                    |
+| Shipmentsource | category_id | null: false                    |
+| deliverydate   | category_id | null: false                    |
+| user           | category_id | null: false, foreign_key: true |
 
 ### Association
 
@@ -65,18 +65,15 @@ Things you may want to cover:
 
 ## buyers テーブル
 
-| Column           | Type       | Options                        |
-| ---------------- | ---------- | ------------------------------ |
-| post_num         | integer    | null: false                    |
-| Prefectures      | integer_id | null: false                    |
-| city             | text       | null: false                    |
-| line             | text       | null: false                    |
-| building         | text       |                                |
-| tel_num          | integer    | null: false                    |
-| card_num         | integer    | null: false                    |
-| dead_line_month  | integer    | null: false                    |
-| dead_line_year   | integer    | null: false                    |
-| oder             | references | null: false, foreign_key: true |
+| Column           | Type        | Options                        |
+| ---------------- | ----------- | ------------------------------ |
+| post_num         | integer     | null: false                    |
+| Prefectures      | category_id | null: false                    |
+| city             | text        | null: false                    |
+| line             | text        | null: false                    |
+| building         | text        |                                |
+| tel_num          | integer     | null: false                    |
+| order            | references  | null: false, foreign_key: true |
 
 
 ### Association
