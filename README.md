@@ -61,9 +61,9 @@ Things you may want to cover:
 
 - belongs_to :user
 - belongs_to :item
-- has_one :buyer
+- has_one :address
 
-## buyers テーブル
+## addresses テーブル
 
 | Column           | Type        | Options                        |
 | ---------------- | ----------- | ------------------------------ |
