@@ -69,9 +69,9 @@ Things you may want to cover:
 | ---------------- | ----------- | ------------------------------ |
 | post_num         | string      | null: false                    |
 | prefecture_id    | integer     | null: false                    |
-| city             | integer     | null: false                    |
-| line             | integer     | null: false                    |
-| building         | integer     |                                |
+| city             | string      | null: false                    |
+| line             | string      | null: false                    |
+| building         | string      |                                |
 | tel_num          | integer     | null: false                    |
 | order            | references  | null: false, foreign_key: true |
 
