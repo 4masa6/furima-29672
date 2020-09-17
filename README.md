@@ -67,11 +67,11 @@ Things you may want to cover:
 
 | Column           | Type        | Options                        |
 | ---------------- | ----------- | ------------------------------ |
-| post_num         | integer     | null: false                    |
+| post_num         | string      | null: false                    |
 | prefecture_id    | integer     | null: false                    |
-| city             | text        | null: false                    |
-| line             | text        | null: false                    |
-| building         | text        |                                |
+| city             | integer     | null: false                    |
+| line             | integer     | null: false                    |
+| building         | integer     |                                |
 | tel_num          | integer     | null: false                    |
 | order            | references  | null: false, foreign_key: true |
 
