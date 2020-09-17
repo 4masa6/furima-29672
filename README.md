@@ -72,7 +72,7 @@ Things you may want to cover:
 | city             | string      | null: false                    |
 | line             | string      | null: false                    |
 | building         | string      |                                |
-| tel_num          | integer     | null: false                    |
+| tel_num          | string      | null: false                    |
 | order            | references  | null: false, foreign_key: true |
 
 
