@@ -22,8 +22,8 @@ Things you may want to cover:
 | password        | string | null: false |
 | last_name       | string | null: false |
 | first_name      | string | null: false |
-| last_name_read  | string | null: false |
-| first_name_read | string | null: false |
+| last_name_kana  | string | null: false |
+| first_name_kana | string | null: false |
 | birthday        | date   | null: false |
 
 ### Association
