@@ -3,7 +3,7 @@ class ItemsController < ApplicationController
   before_action :move_to_index, except: [:index, :show, :new]
 
   def index
-    # indexに商品を表示する記述 @ item = Item.all でビューにわたす
+    @items = Item.all
   end
 
   def show
