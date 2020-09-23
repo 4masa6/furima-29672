@@ -3,10 +3,11 @@ class ItemsController < ApplicationController
   before_action :move_to_index, except: [:index, :show, :new]
 
   def index
-    # indexに商品を表示する記述 @ item = Item.all でビューにわたす
+    @items = Item.all.order("created_at DESC")
   end
 
   def show
+    @item = Item.find(params[:id])
   end
 
   def new
