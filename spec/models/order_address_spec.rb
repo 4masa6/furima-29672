@@ -43,6 +43,11 @@ RSpec.describe OrderAddress, type: :model do
         @order_address.valid?
         expect(@order_address.errors.full_messages).to include("Phone number is invalid")
       end
+      it 'phone_numberが12文字以上だと保存できない' do
+        @order_address.phone_number = "090123456789"
+        @order_address.valid?
+        expect(@order_address.errors.full_messages).to include("Phone number is invalid")
+      end
       it 'prefecture_idが空だと保存できない' do
         @order_address.prefecture_id = 0
         @order_address.valid?
