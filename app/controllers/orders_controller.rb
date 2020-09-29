@@ -15,11 +15,18 @@ class OrdersController < ApplicationController
     if @order.valid?
       pay_item
       @order.save
+      # @item_purchaser = Item.find(params[:item_id])
+      # @product_purchaser.update(purchaser_id: cuurent_user.id)
       return redirect_to root_path
     else
       render "index"
     end
   end
+
+  # def done
+  #   @item_purchaser = Item.find(params[:id])
+  #   @product_purchaser.update(purchaser_id: cuurent_user.id)
+  # end
   
   private
 
