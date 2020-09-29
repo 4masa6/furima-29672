@@ -21,7 +21,7 @@ class ItemsController < ApplicationController
     if @item.save
       redirect_to root_path
     else
-      render :index
+      render :new
     end
   end
 
@@ -34,18 +34,6 @@ class ItemsController < ApplicationController
     else
       render :edit
     end
-  end
-
-  def edit
-  end
-
-  def update
-    if @item.update(item_params)
-      redirect_to item_path(@item.id)
-    else
-      render :edit
-    end
-    
   end
 
   def destroy
